@@ -1,6 +1,6 @@
 -- ====================================================================
 -- Project: M&A Valuation & Financial Forecast Analysis
--- Script: 05_cagr_5yr_projections.sql
+-- Script: 05_cagr_five_year_projections.sql
 -- Purpose: Create a 5-year company financial projects based off
 --          CAGR/Expense CAGR market trend scenarios (Bull, Base, Bear)
 -- Created By: Aiden Chen
@@ -12,7 +12,7 @@
 -- Bear: Pessemistic market categorized by decrease in revenue alongside compressed margins (-1.87% CAGR, +2.0% Expense CAGR)
 
 -- Step 2: Create View of Scenario-Based Projections (Bull, Base, Bear)
-CREATE VIEW v_cagr_5yr_projections AS (
+CREATE VIEW v_cagr_five_year_projections AS (
     WITH latest_year AS (
         SELECT
             year AS base_year,
@@ -64,4 +64,4 @@ CREATE VIEW v_cagr_5yr_projections AS (
 
 -- Step 3: Report Output Query
 SELECT *
-FROM v_cagr_5yr_projections
+FROM v_cagr_five_year_projections
