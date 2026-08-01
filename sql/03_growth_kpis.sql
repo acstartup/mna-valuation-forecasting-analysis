@@ -21,7 +21,7 @@ CREATE OR REPLACE VIEW v_growth_kpis AS
         c.expense,
         c.net_profit,
         ROUND((c.gross_income - p.prior_year_gross_income)/(p.prior_year_gross_income) * 100, 2) AS yoy_growth_pct,
-        POWER((c.gross_income/p.ten_year_prior_revenue) * 100, (1.0/10.0)) - 1 AS ten_year_cagr
+        ROUND(POWER((c.gross_income/p.ten_year_prior_revenue) * 100, (1.0/10.0)) - 1, 2) AS ten_year_cagr
     FROM company_financials c
     JOIN prior_years p
         ON c.year = p.year;
