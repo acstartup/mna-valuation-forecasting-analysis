@@ -1,3 +1,11 @@
+-- ====================================================================
+-- Project: M&A Valuation & Financial Forecasting Analysis
+-- Script: 03_growth_kpis.sql
+-- Purpose: Create growth metrics: YoY Revenue Growth % & and 10Y Compounded Annual Growth Rate (CAGR) %
+-- Created By: Aiden Chen
+-- ====================================================================
+
+-- Step 1: Create View of YoY Revenue Growth % & 10Y CAGR
 CREATE OR REPLACE VIEW v_growth_kpis AS
     WITH prior_years AS (
         SELECT
@@ -18,6 +26,7 @@ CREATE OR REPLACE VIEW v_growth_kpis AS
     JOIN prior_years p
         ON c.year = p.year;
 
+-- Step 2: Report Output Query
 SELECT *
 FROM v_growth_kpis
 ORDER BY year ASC;
