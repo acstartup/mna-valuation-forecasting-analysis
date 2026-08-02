@@ -10,7 +10,7 @@
 CREATE OR REPLACE VIEW v_profitability_kpis AS
 SELECT
     year,
-    gross_income,
+    revenue,
     expense,
     net_profit,
     ROUND((net_profit/gross_income) * 100, 2) AS net_margin_pct,
