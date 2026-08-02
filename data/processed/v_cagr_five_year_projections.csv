@@ -1,5 +1,5 @@
 "scenario","projected_year","year_index","projected_revenue","projected_expense","projected_profit","projected_net_margin_pct"
-"Base Care (Historical CAGR)",2026,0,"7219983.75","6734275.82","485707.93",""
+"Base Case (Historical CAGR)",2026,0,"7219983.75","6734275.82","485707.93",""
 "Base Case (Historical CAGR)",2027,1,"7354997.45","6861553.63","493443.81","6.71"
 "Base Case (Historical CAGR)",2028,2,"7492535.90","6991237.00","501298.90","6.69"
 "Base Case (Historical CAGR)",2029,3,"7632646.32","7123371.38","509274.94","6.67"
