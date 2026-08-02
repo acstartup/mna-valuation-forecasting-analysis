@@ -11,10 +11,10 @@ CREATE TABLE IF NOT EXISTS company_financials (
     year INT PRIMARY KEY,
     revenue NUMERIC(12, 2) NOT NULL,
     expense NUMERIC(12, 2) NOT NULL,
-    net_profit NUMERIC(12, 2) NOT NULL
+    profit NUMERIC(12, 2) NOT NULL
 );
 
 -- Step 2: Data Insertion From Files (Client-Given)
-COPY company_financials(year, revenue, expense, net_profit)
+COPY company_financials(year, revenue, expense, profit)
 FROM '/tmp/mna_data.csv'
 WITH (FORMAT csv, HEADER true);
