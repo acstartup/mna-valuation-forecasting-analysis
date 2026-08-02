@@ -1,6 +1,6 @@
 -- ====================================================================
 -- Project: M&A Valuation & Financial Forecasting Analysis
--- Script: 01_profitability_margin_analysis.sql
+-- Script: 02_profitability_kpis.sql
 -- Purpose: Calculate profitability margin metrics: net profit 
 --          margin %, expense to revenue %
 -- Created By: Aiden Chen
