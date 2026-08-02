@@ -1,4 +1,4 @@
-"year","gross_income","expense","net_profit","net_margin_pct","expense_revenue_pct"
+"year","revenue","expense","net_profit","net_margin_pct","expense_revenue_pct"
 2015,"17182.92","15118.11","2064.81","12.02","87.98"
 2016,"142006.24","107780.22","34226.02","24.10","75.90"
 2017,"529382.51","422063.25","107319.26","20.27","79.73"

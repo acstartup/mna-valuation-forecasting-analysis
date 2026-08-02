@@ -1,4 +1,4 @@
-"year","gross_income","expense","net_profit","yoy_growth_pct","ten_year_cagr","ten_year_expense_cagr"
+"year","revenue","expense","net_profit","yoy_growth_pct","ten_year_cagr","ten_year_expense_cagr"
 2015,"17182.92","15118.11","2064.81","","",""
 2016,"142006.24","107780.22","34226.02","726.44","",""
 2017,"529382.51","422063.25","107319.26","272.79","",""
