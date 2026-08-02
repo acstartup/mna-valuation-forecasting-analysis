@@ -12,8 +12,8 @@ SELECT
     year,
     revenue,
     expense,
-    net_profit,
-    ROUND((net_profit/gross_income) * 100, 2) AS net_margin_pct,
+    profit,
+    ROUND((profit/gross_income) * 100, 2) AS net_margin_pct,
     ROUND((expense/gross_income) * 100, 2) AS expense_revenue_pct
 FROM company_financials;
 
