@@ -12,7 +12,7 @@ SELECT *
 FROM company_financials
 
 -- Step 2: Calculations For (YTD/Months-into-2026) * 12
-INSERT INTO company_financials(year, revenue, expense, net_profit)
+INSERT INTO company_financials(year, revenue, expense, profit)
 VALUES (2026, (4813322.50/8) * 12, (4489517.21/8) * 12, 485707.93)
 
 -- Step 3: Review Processed Table Output
