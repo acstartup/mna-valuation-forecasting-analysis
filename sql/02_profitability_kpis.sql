@@ -13,8 +13,8 @@ SELECT
     revenue,
     expense,
     profit,
-    ROUND((profit/gross_income) * 100, 2) AS net_margin_pct,
-    ROUND((expense/gross_income) * 100, 2) AS expense_revenue_pct
+    ROUND((profit/revenue) * 100, 2) AS net_margin_pct,
+    ROUND((expense/revenue) * 100, 2) AS expense_revenue_pct
 FROM company_financials;
 
 -- Step 2: Report Output Query
