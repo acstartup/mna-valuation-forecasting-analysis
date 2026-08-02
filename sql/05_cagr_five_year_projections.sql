@@ -16,10 +16,10 @@ CREATE VIEW v_cagr_five_year_projections AS (
     WITH latest_year AS (
         SELECT
             year AS base_year,
-            gross_income AS base_revenue,
+            revenue AS base_revenue,
             expense AS base_expense,
             net_profit AS base_profit,
-            (net_profit::NUMERIC / NULLIF(gross_income, 0)) AS base_profit_margin
+            (net_profit::NUMERIC / NULLIF(revenue, 0)) AS base_profit_margin
         FROM company_financials_incl_2026
         WHERE year = 2026
     ),
