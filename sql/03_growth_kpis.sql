@@ -5,26 +5,26 @@
 -- Created By: Aiden Chen
 -- ====================================================================
 
--- Step 1: Create View of YoY Revenue Growth %, 10Y CAGR, And 10Y Expense CAGR
+-- Step 1: Create View Of YoY Revenue Growth %, 10Y CAGR, And 10Y Expense CAGR
 CREATE OR REPLACE VIEW v_growth_kpis AS
     WITH prior_years AS (
         SELECT
             year,
-            gross_income,
+            revenue,
             expense,
             net_profit,
-            LAG(gross_income, 1) OVER (ORDER BY year) AS prior_year_gross_income,
-            LAG(gross_income, 10) OVER (ORDER BY year ASC) AS ten_year_prior_revenue
+            LAG(revenue, 1) OVER (ORDER BY year) AS prior_year_revenue,
+            LAG(revenue, 10) OVER (ORDER BY year ASC) AS ten_year_prior_revenue
             LAG(expense, 10) OVER (ORDER BY year ASC) AS ten_year_prior_expense
         FROM company_financials
     )
     SELECT
         c.year,
-        c.gross_income,
+        c.revenue,
         c.expense,
         c.net_profit,
-        ROUND((c.gross_income - p.prior_year_gross_income)/(p.prior_year_gross_income) * 100, 2) AS yoy_growth_pct,
-        ROUND(POWER((c.gross_income/p.ten_year_prior_revenue) * 100, (1.0/10.0)) - 1, 2) AS ten_year_cagr,
+        ROUND((c.revenue - p.prior_year_revenue)/(p.prior_year_revenue) * 100, 2) AS yoy_growth_pct,
+        ROUND(POWER((c.revenue/p.ten_year_prior_revenue) * 100, (1.0/10.0)) - 1, 2) AS ten_year_cagr,
         ROUND(POWER((c.expense/p.ten_year_prior_expense) * 100, (1.0/10.0)) - 1, 2) AS ten_year_expense_cagr
     FROM company_financials c
     JOIN prior_years p
